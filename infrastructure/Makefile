@@ -40,7 +40,7 @@ logs:
 logs-watch:
 	docker-compose logs --follow
 web:
-	docker-compose exec web ash
+	docker-compose exec web bash
 app:
 	docker-compose exec app bash
 migrate:

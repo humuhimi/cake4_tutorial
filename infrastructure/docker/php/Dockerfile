@@ -10,8 +10,8 @@ ENV TZ=UTC \
   # composer environment
   COMPOSER_ALLOW_SUPERUSER=1 \
   COMPOSER_HOME=/composer
-
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+# latestでは動かない1.10
+COPY --from=composer:1.10 /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update && \
   apt-get -y install git libicu-dev libonig-dev libzip-dev unzip locales && \
