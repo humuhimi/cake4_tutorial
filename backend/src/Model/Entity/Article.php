@@ -10,5 +10,5 @@ class Article extends Entity
         '*' => true,
         'id' => false,
         'slug' => false,
-    ]
+    ];
 }
